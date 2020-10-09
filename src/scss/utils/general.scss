@@ -1,0 +1,81 @@
+// Text
+.caption {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+// Headers
+h1, h2, h3, h4, h5 {
+
+}
+
+h2  {
+  font-family: Montserrat;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+h3  {
+  font-family: Montserrat;
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+h4  {
+  font-family: Montserrat;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+h5  {
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+
+// Buttons
+.btn-primary {
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0;
+  font-weight: 500;
+  background-color: $blue-color;
+  color: $white-color;
+  padding: 8px 24px;
+  border-radius: 4px;
+}
+
+.btn-secondary-outline-light {
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0;
+  font-weight: 500;
+  box-sizing: border-box;
+  border: 2px solid #FFFFFF;
+  color: $white-color;
+  padding: 6px 24px;
+  border-radius: 4px;
+}
+
+.btn-secondary-outline-dark {
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0;
+  font-weight: 500;
+  box-sizing: border-box;
+  border: 2px solid $black-color;
+  color: $black-color;
+  padding: 6px 24px;
+  border-radius: 4px;
+}
