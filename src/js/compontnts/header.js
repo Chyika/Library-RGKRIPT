@@ -11,3 +11,8 @@ $(window).scroll(function() {
   }
 });
 
+// Click on btn-toggle-nav
+$('.btn-toggle-nav').on('click', function () {
+  $(this).toggleClass('btn-toggle-nav--open')
+})
+

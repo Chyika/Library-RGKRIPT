@@ -25,6 +25,11 @@ header {
         color: $black-color;
       }
     }
+    .btn-toggle-nav {
+      &:before, &:after, & > span {
+        background-color: $black-color!important;
+      }
+    }
   }
 
   .container {
@@ -46,4 +51,60 @@ header {
     margin-left: 13px;
     color: $white-color;
   }
+}
+
+.btn-toggle-nav {
+  display: none;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  &:before, &:after, & > span {
+    transition: all .5s ease;
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 30px;
+    background-color: $white-color;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  &:after {
+    top: 5px;
+  }
+  &:before {
+    bottom: 5px;
+
+  }
+  & > span {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &.btn-toggle-nav--open {
+    &:after {
+      transform: rotate(-45deg) translate(-50%, -50%);
+
+    }
+    &:before {
+      transform: rotate(45deg) translate(-50%, -50%);
+      left: 49%;
+    }
+    & > span {
+      left: -5px;
+      opacity: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $tableWidth) {
+  .container-btn-account {
+    display: none;
+  }
+  .btn-toggle-nav {
+    display: block;
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+
 }

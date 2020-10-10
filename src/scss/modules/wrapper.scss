@@ -128,15 +128,17 @@
   }
 
   &.list--close {
+    .textbook-arrow {
+      transform: rotate(180deg);
+    }
     & > .textbook-list {
       overflow: hidden;
-      height: 0!important;
+      height: 0 !important;
     }
-
   }
 
   & > .textbook-list {
-
+    overflow: hidden;
     transition: all 1s ease;
 
     & > .textbook-item-child.list--close {
@@ -161,6 +163,7 @@
   color: $paragraph-color;
 
   .textbook-arrow {
+    transition: all 0.5s ease;
     margin-left: auto;
   }
 }
@@ -183,6 +186,8 @@
   }
 
   .textbook-item-actions {
+    min-width: 101px;
+    margin-left: 15px;
     a {
       margin-left: 12px;
 
@@ -195,4 +200,18 @@
 
 body {
   padding-bottom: 300px;
+}
+
+.header-section {
+  text-align: center;
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .textbook-item-child {
+    flex-direction: column;
+  }
+  .textbook-item-actions {
+    margin-left: 0!important;
+    margin-top: 15px;
+  }
 }
