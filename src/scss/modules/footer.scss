@@ -1,1 +1,11 @@
-// footer style
+footer {
+  margin-top: 100px;
+  height: 60px;
+  background-color: #F1EDEA;
+  & > .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: $paragraph-color;
+  }
+}

@@ -12,7 +12,7 @@ header {
 
   &.not-transparent {
     background-color: $white-color;
-    box-shadow: 0px 1px 6px $black-color;
+    box-shadow: 0px 1px 6px #e5e5e573;
 
     #logo {
       svg {

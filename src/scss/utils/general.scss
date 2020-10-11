@@ -7,6 +7,14 @@
   font-weight: 400;
 }
 
+.paragraph {
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
 // Headers
 h1, h2, h3, h4, h5 {
   //text-align: center;
@@ -43,6 +51,7 @@ h5  {
 
 // Buttons
 .btn-primary {
+  text-align: center;
   font-family: "Open Sans";
   font-size: 16px;
   line-height: 22px;
@@ -52,9 +61,13 @@ h5  {
   color: $white-color;
   padding: 8px 24px;
   border-radius: 4px;
+  &:hover {
+    background-color: darken($blue-color, 10%);
+  }
 }
 
 .btn-secondary-outline-light {
+  text-align: center;
   font-family: "Open Sans";
   font-size: 16px;
   line-height: 22px;
@@ -68,6 +81,7 @@ h5  {
 }
 
 .btn-secondary-outline-dark {
+  text-align: center;
   font-family: "Open Sans";
   font-size: 16px;
   line-height: 22px;
@@ -78,4 +92,25 @@ h5  {
   color: $black-color;
   padding: 6px 24px;
   border-radius: 4px;
+  &:hover {
+    background-color: $gray-light-color;
+  }
+}
+
+.btn-secondary-without-outline-primary {
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0;
+  font-weight: 500;
+  box-sizing: border-box;
+  color: $blue-color;
+  padding: 6px 0;
+  &:hover {
+    color: darken($blue-color, 10%);
+  }
+}
+
+.stop-scroll {
+  overflow: hidden;
 }
