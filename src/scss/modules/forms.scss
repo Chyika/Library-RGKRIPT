@@ -5,7 +5,7 @@ input {
   }
 }
 
-.overlays {
+.overlay {
   display: none;
   width: 100%;
   height: 100vh;
@@ -21,7 +21,7 @@ input {
   }
 }
 
-.form-overlay {
+.overlay__form {
   position: relative;
   margin-bottom: 200px;
   padding: 30px 40px;
@@ -36,6 +36,15 @@ input {
   h4 {
     text-align: center;
   }
+}
+
+.form {
+
+}
+
+.from__btn-input {
+  text-align: left;
+  padding: 10px 0 0 0;
 }
 
 .form-header-container-btn {

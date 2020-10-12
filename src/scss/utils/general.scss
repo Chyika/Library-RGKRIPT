@@ -50,54 +50,44 @@ h5  {
 }
 
 // Buttons
-.btn-primary {
+.btn {
   text-align: center;
   font-family: "Open Sans";
   font-size: 16px;
   line-height: 22px;
   letter-spacing: 0;
   font-weight: 500;
-  background-color: $blue-color;
-  color: $white-color;
   padding: 8px 24px;
   border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn--primary {
+  background-color: $blue-color;
+  color: $white-color;
   &:hover {
     background-color: darken($blue-color, 10%);
   }
 }
 
-.btn-secondary-outline-light {
-  text-align: center;
-  font-family: "Open Sans";
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: 0;
-  font-weight: 500;
-  box-sizing: border-box;
-  border: 2px solid #FFFFFF;
+.btn--secondary-outline-light {
+  border: 2px solid $white-color;
   color: $white-color;
-  padding: 6px 24px;
-  border-radius: 4px;
+  &:hover {
+    border: 2px solid $blue-color;
+    color: $blue-color;
+  }
 }
 
-.btn-secondary-outline-dark {
-  text-align: center;
-  font-family: "Open Sans";
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: 0;
-  font-weight: 500;
-  box-sizing: border-box;
+.btn--secondary-outline-dark {
   border: 2px solid $black-color;
   color: $black-color;
-  padding: 6px 24px;
-  border-radius: 4px;
   &:hover {
     background-color: $gray-light-color;
   }
 }
 
-.btn-secondary-without-outline-primary {
+.btn--secondary-without-outline {
   font-family: "Open Sans";
   font-size: 16px;
   line-height: 22px;
@@ -105,7 +95,6 @@ h5  {
   font-weight: 500;
   box-sizing: border-box;
   color: $blue-color;
-  padding: 6px 0;
   &:hover {
     color: darken($blue-color, 10%);
   }

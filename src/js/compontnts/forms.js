@@ -1,24 +1,24 @@
 function overlayClose() {
-  $('.overlays').removeClass('overlay-show')
+  $('.overlay').removeClass('overlay-show')
   $('body').removeClass('stop-scroll')
-  $('.form-overlay').removeClass('form-overlay-active')
+  $('.overlay__form').removeClass('form-overlay-active')
 }
 
 $('.btn-sign-up').on('click', function () {
   overlayClose()
-  $('.overlays').addClass('overlay-show')
+  $('.overlay').addClass('overlay-show')
   $('body').addClass('stop-scroll')
   $('#form-sign-up').addClass('form-overlay-active')
 })
 
 $('.btn-sign-in').on('click', function () {
   overlayClose()
-  $('.overlays').addClass('overlay-show')
+  $('.overlay').addClass('overlay-show')
   $('body').addClass('stop-scroll')
   $('#form-sign-in').addClass('form-overlay-active')
 })
 
-$('.overlays').on('click', function (event) {
+$('.overlay').on('click', function (event) {
   if (event.target !== this) return
   overlayClose()
 })

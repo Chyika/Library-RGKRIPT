@@ -5,7 +5,7 @@
   }
 }
 
-#first-screen {
+.first-screen {
   height: 640px;
   padding: 0;
   position: relative;
@@ -82,7 +82,7 @@
 
   }
 
-  .overlay {
+  .first-screen__overlay {
     display: block;
     z-index: 0;
     position: absolute;
@@ -93,7 +93,7 @@
   }
 }
 
-#textbooks {
+.textbooks {
   padding: 0;
   .container {
     display: flex;
@@ -103,116 +103,13 @@
       margin: 50px 0;
       color: $paragraph-color;
     }
-    .btn-secondary-without-outline-primary {
-      margin-top: 30px;
-    }
   }
 }
 
-.container-textbook-list {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.textbook-item {
-  max-width: 920px;
-  width: 100%;
-  margin-top: 15px;
-  transition: all 1s ease;
-
-  &:first-child {
-    margin-top: 0;
-  }
-
-  &.list--close {
-    .textbook-arrow {
-      transform: rotate(180deg);
-    }
-    & > .textbook-list {
-      overflow: hidden;
-      height: 0 !important;
-    }
-    .textbook-header {
-      border-left: 0 solid $blue-color;
-      padding-left: 26px;
-    }
-  }
-
-  & > .textbook-list {
-    overflow: hidden;
-    transition: all 1s ease;
-
-    & > .textbook-item-child.list--close {
-      transition: all 1s ease;
-      transform: translate(-500px, 0);
-      opacity: 0;
-    }
-
-  }
-
-}
-
-.textbook-header {
-  display: flex;
-  align-items: center;
-  background-color: $white-color;
-  box-shadow: 0px 1px 6px #E5E5E5;
-  min-height: 55px;
-  padding: 15px 20px;
-  border-left: 6px solid $blue-color;
-  color: $paragraph-color;
-  transition: all .1s ease;
-  .textbook-arrow {
-    transition: all 0.5s ease;
-    margin-left: auto;
-  }
-}
-
-.textbook-item-child {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 15px;
-  background: $gray-light-color;
-  box-shadow: 0px 1px 6px #D7D7D2;
-  padding: 22px 25px;
-
-  p {
-    padding: 0;
-    margin: 0;
-
-    &:first-child {
-      margin-bottom: 8px;
-    }
-  }
-
-  .textbook-item-actions {
-    min-width: 101px;
-    margin-left: 15px;
-    a {
-      margin-left: 12px;
-
-      &:first-child {
-        margin-left: 0;
-      }
-    }
-  }
-}
-
-body {
+.textbooks__btn-more {
+  margin-top: 30px;
 }
 
 .header-section {
   text-align: center;
-}
-
-@media screen and (max-width: $phoneWidth) {
-  .textbook-item-child {
-    flex-direction: column;
-  }
-  .textbook-item-actions {
-    margin-left: 0!important;
-    margin-top: 15px;
-  }
 }

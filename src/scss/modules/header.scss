@@ -6,32 +6,24 @@ header {
   justify-content: center;
   height: 70px;
   position: fixed;
+  top: 0;
   z-index: 1000;
   width: 100%;
   transition: background-color 0.2s ease;
-
-  &.not-transparent {
-    background-color: $white-color;
-    box-shadow: 0px 1px 6px #e5e5e573;
-
-    #logo {
-      svg {
-        path {
-          fill: #3FAAEE;
-        }
-        //stroke: $blue-color;
+  background-color: $white-color;
+  box-shadow: 0px 1px 6px #e5e5e573;
+  color: $white-color;
+  #logo {
+    svg {
+      path {
+        fill: #3FAAEE;
       }
-      h5 {
-        color: $black-color;
-      }
+      //stroke: $blue-color;
     }
-    .btn-toggle-nav {
-      &:before, &:after, & > span {
-        background-color: $black-color!important;
-      }
+    h5 {
+      color: $black-color;
     }
   }
-
   .container {
     align-items: center;
     justify-content: space-between;
@@ -40,6 +32,35 @@ header {
       a:first-child {
         margin-right: 10px;
       }
+    }
+  }
+}
+
+.header--transparent {
+  background: none;
+  box-shadow: none;
+  .btn--secondary-outline-dark {
+    border: 2px solid $white-color;
+    color: $white-color;
+    &:hover {
+      border: 2px solid $blue-color;
+      color: $blue-color;
+      background: none;
+    }
+  }
+  #logo {
+    svg {
+      path {
+        fill: $white-color;
+      }
+    }
+    h5 {
+      color: $white-color;
+    }
+  }
+  .btn-toggle-nav {
+    &:before, &:after, & > span {
+      background-color: $black-color!important;
     }
   }
 }
