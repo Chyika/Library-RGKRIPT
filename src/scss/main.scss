@@ -29,6 +29,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 *, *:before, *:after { box-sizing: border-box; }
@@ -65,10 +66,12 @@ section, .section {
   flex-direction: column;
   min-height: 100vh;
   margin: 70px auto 0 auto;
+  overflow: hidden;
 }
 
 #index-page {
   margin-top: 0;
+  position: relative;
 }
 
 .content-wrapper {

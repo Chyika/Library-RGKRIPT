@@ -78,6 +78,11 @@ module.exports = {
       template: `${PATHS.src}/pages/library.html`,
       filename: './library.html'
     }),
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/pages/watching.html`,
+      filename: './watching.html'
+    }),
     new CopyWebpackPlugin({
       patterns: [
         { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },

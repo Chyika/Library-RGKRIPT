@@ -14,6 +14,25 @@ $(window).scroll(function() {
 
 // Click on btn-toggle-nav
 $('.btn-toggle-nav').on('click', function () {
+  if ($(this).hasClass('btn-toggle-nav--open')) {
+    $('.overlay').removeClass('overlay-show')
+    $('body').removeClass('stop-scroll')
+    $('.overlay__form').removeClass('form-overlay-active')
+  } else {
+    $('.overlay').removeClass('overlay-show')
+    $('body').removeClass('stop-scroll')
+    $('.overlay__form').removeClass('form-overlay-active')
+
+    $('.overlay').addClass('overlay-show')
+    $('body').addClass('stop-scroll')
+    $('#form-sign-in').addClass('form-overlay-active')
+  }
   $(this).toggleClass('btn-toggle-nav--open')
+  header.toggleClass('header--only-btn-nav')
+})
+
+
+$('.btn-toggle-nav').on('click', function (event) {
+
 })
 

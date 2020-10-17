@@ -7,7 +7,7 @@ header {
   height: 70px;
   position: fixed;
   top: 0;
-  z-index: 1000;
+  z-index: 7777;
   width: 100%;
   transition: background-color 0.2s ease;
   background-color: $white-color;
@@ -36,9 +36,18 @@ header {
   }
 }
 
+.header--only-btn-nav {
+  box-shadow: none;
+  background: none;
+  & #logo, & .container-btn-account {
+    display: none!important;
+  }
+}
+
 .header--transparent {
   background: none;
   box-shadow: none;
+  z-index: 8888;
   .btn--secondary-outline-dark {
     border: 2px solid $white-color;
     color: $white-color;
@@ -60,7 +69,7 @@ header {
   }
   .btn-toggle-nav {
     &:before, &:after, & > span {
-      background-color: $black-color!important;
+      background-color: $white-color!important;
     }
   }
 }
@@ -79,13 +88,14 @@ header {
   position: relative;
   width: 35px;
   height: 35px;
+  margin-left: auto;
   &:before, &:after, & > span {
     transition: all .5s ease;
     position: absolute;
     content: "";
     height: 3px;
     width: 30px;
-    background-color: $white-color;
+    background-color: $black-color;
     left: 50%;
     transform: translate(-50%, 0);
   }
@@ -102,9 +112,11 @@ header {
   }
 
   &.btn-toggle-nav--open {
+    &:after, &:before, & > span {
+      background-color: $black-color!important;
+    }
     &:after {
       transform: rotate(-45deg) translate(-50%, -50%);
-
     }
     &:before {
       transform: rotate(45deg) translate(-50%, -50%);
